@@ -8,7 +8,7 @@ public final class EmptyStack<T> implements Stack<T> {
 
     private final static EmptyStack emptyStack = new EmptyStack();
 
-    public final static EmptyStack getInstance() {
+    static EmptyStack getInstance() {
         return emptyStack;
     }
 

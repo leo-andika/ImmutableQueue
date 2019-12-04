@@ -55,12 +55,12 @@ public class ImmutableQueue<T> implements Queue<T> {
 
     public T head() throws Exception {
         if (this.isEmpty()) {
-            return null;
+            throw new Exception("Queue is empty");
         }
         return this.forwards.getHead();
     }
 
     public boolean isEmpty() {
-        return false;
+        return forwards.isEmpty() && backwards.isEmpty();
     }
 }

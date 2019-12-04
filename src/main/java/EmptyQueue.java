@@ -9,6 +9,10 @@ public final class EmptyQueue<T> implements Queue<T> {
 
     private final static EmptyQueue emptyQueue = new EmptyQueue();
 
+    static EmptyQueue getInstance() {
+        return emptyQueue;
+    }
+
     @SuppressWarnings("unchecked")
     public Queue<T> enQueue(T t) {
         return new ImmutableQueue<T>(ImmutableStack.getEmptyStack().push(t), ImmutableStack.getEmptyStack());
@@ -24,9 +28,5 @@ public final class EmptyQueue<T> implements Queue<T> {
 
     public boolean isEmpty() {
         return true;
-    }
-
-    public final static EmptyQueue getInstance() {
-        return emptyQueue;
     }
 }
