@@ -42,4 +42,13 @@ public class ImmutableStackTest {
     public void testHeadFromEmptyStack_ShouldThrowException() throws Exception {
         stack.getHead();
     }
+
+    @Test
+    public void testIsEmptyOnFilledStack_ShouldReturnFalse() {
+        String data1 = "paypay";
+        String data2 = "japan";
+        stack = stack.push(data1).push(data2);
+
+        Assert.assertFalse(stack.isEmpty());
+    }
 }

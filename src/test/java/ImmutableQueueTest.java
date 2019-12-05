@@ -61,4 +61,12 @@ public class ImmutableQueueTest {
         queue.head();
     }
 
+    @Test
+    public void testIsEmptyOnFilledQueue_ShouldReturnFalse() {
+        String data1 = "unit";
+        String data2 = "test";
+        queue = queue.enQueue(data1).enQueue(data2);
+        Assert.assertFalse(queue.isEmpty());
+    }
+
 }

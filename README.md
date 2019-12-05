@@ -5,9 +5,9 @@ This repository contains the interfaces and implementation class for simulating 
 
 ## Main functionality
 If you would like to use my implementation of immutable queue, there are several methods you can use, as follows:
- 1. Create a new Immutable queue
+ 1. Create an empty Immutable queue
 	 ```java
-	Queue<T> newQueue = new ImmutableQueue<T>();
+	Queue<T> newQueue = ImmutableQueue.getEmptyQueue();
 	 ```
  2. Insert new element to the queue
 	 ```java
